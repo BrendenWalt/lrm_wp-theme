@@ -58,6 +58,19 @@ get_header();
         </div>
       </div>
 
+      <?php if ( !empty($homepage_bg_image)) { ?>
+
+        <div class="mobile-home-img">
+          <img src="<?php echo $homepage_bg_image['url']; ?>" alt="<?php echo $homepage_bg_image['alt']; ?>">
+        </div>
+        
+      <?php } ?>
+        
+
+      <div class="mobile-home-img">
+
+      </div>
+
       <div class="social-container">
         <?php if($social_media_accounts && in_array('facebook', $social_media_accounts) ) : ?>
           <div class="social-icon">
