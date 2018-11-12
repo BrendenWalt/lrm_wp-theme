@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Query Selectors
     var anchors = document.getElementsByClassName('menu-item')
     var hamburger = document.getElementById("mobile-nav");
-    var links = document.getElementById("nav-links");
+    var links = document.getElementsByClassName("nav-links");
     var toTop = document.getElementById("toTop");
     var pageBody = document.getElementsByTagName("body");
     var navBar = document.getElementById("site-nav");
- 
+    var navLinks = document.getElementsByClassName("nav-links-wrapper");
     // Sticky Nav on Scroll
 
     function stickyNav() {
@@ -28,9 +28,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Show Mobile Menu on Hamburger Click
     var onHamburgerClick = function(event) {
       event.preventDefault();
-      console.log("Hamburger clicked");
       console.log(links);
-      links.classList.add("mobile-menu");
+      links[0].classList.add("mobile-menu");
+      if (navLinks[0].classList.contains("show-menu")) {
+        navLinks[0].classList.remove("show-menu");
+        console.log ("Hiding Mobile menu!");
+      } else {
+        navLinks[0].classList.add("show-menu");
+        console.log("Showing Mobile menu");
+      }
+      
     }
 
     // Anchor Link Scrolling
