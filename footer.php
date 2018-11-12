@@ -54,7 +54,7 @@ $youtube_username          = get_field('youtube_account',26);
           <?php endif; ?>
           <?php if($social_media_accounts && in_array('youtube', $social_media_accounts) ) : ?>
             <div class="social-icon">
-              <a href="https://youtube.com/<?php echo $youtube_username; ?>/" target="blank">
+              <a href="https://youtube.com/channel/<?php echo $youtube_username; ?>/" target="blank">
                 <i class="fab fa-youtube"></i>
               </a>
             </div>

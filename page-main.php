@@ -10,7 +10,10 @@ $about_section_image      = get_field('about_section_image');
 $about_section_title      = get_field('about_section_title');
 $about_section_text       = get_field('about_section_text');
 
-$gallery_shortcode        = '[ngg_images gallery_ids="1" display_type="photocrati-nextgen_basic_thumbnails"]';
+$gallery_id               = get_field('image_gallery_id');
+$gallery_shortcode        = '[ngg_images gallery_ids=' . $gallery_id . ' display_type="photocrati-nextgen_basic_thumbnails"]';
+            
+$video_embed              = get_field('video_url');
 
 $resume_section_title     = get_field('resume_section_title');
 $colum_1_title            = get_field('column_1_title');
@@ -79,7 +82,7 @@ get_header();
         <?php endif; ?>
         <?php if($social_media_accounts && in_array('youtube', $social_media_accounts) ) : ?>
           <div class="social-icon">
-            <a href="https://youtube.com/<?php echo $youtube_username; ?>/" target="blank">
+            <a href="https://youtube.com/channel/<?php echo $youtube_username; ?>/" target="blank">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -121,6 +124,18 @@ get_header();
       <div class="gallery-container">
         <?php echo do_shortcode($gallery_shortcode); ?>
         
+      </div>
+      <div class="videos-container">
+
+        <?php $video_loop = new WP_Query( array( 'post_type' => 'video_embed', 'orderby' => 'post_id', 'order' => 'ASC' )); ?>
+
+        <?php while( $video_loop->have_posts() ) : $video_loop->the_post(); ?>
+        <div class="video-wrapper">
+          <div class="video-container">
+            <?php the_field(video_url); ?>
+          </div>
+        </div>
+        <?php endwhile; ?>
       </div>
     </section>
 
