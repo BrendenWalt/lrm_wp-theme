@@ -1333,7 +1333,7 @@ p {
     flex:40%;
   }
   .about-text {
-    margin: 30px 10% 35px;
+    padding: 30px 10% 35px;
   }
   .about-text p {
     line-height: initial;
