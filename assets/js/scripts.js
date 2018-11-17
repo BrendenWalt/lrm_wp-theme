@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-    console.log ("JS Loaded");
 
     // Query Selectors
     var anchors = document.getElementsByClassName('menu-item')
@@ -50,8 +49,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           block: 'start'
       })
       history.pushState(null, null, linkHref)
-      event.preventDefault() 
-      console.log(link[0]);
+      event.preventDefault();
       
     }
     

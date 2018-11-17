@@ -1074,7 +1074,7 @@ p {
   background-color: rgba(255,255,255,0);
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .nav-links.mobile-menu {
     background-color: rgba(116, 83, 238, 0.9);
     display: flex;
@@ -1108,11 +1108,7 @@ p {
     min-width: 475px;
     width: 65%;
 	}
-	.nav-links-wrapper {
-    display: block;
-		margin: 0 auto;
-		width: 60%;
-	}
+	
   #site-nav {
     align-self: initial;
 		min-width: 475px;
@@ -1148,14 +1144,20 @@ p {
     transition: all .5s ease;
     color:#7453ee;
   }
-  #mobile-nav {
-    display: none;
-  }
+ 
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   #nav-links {
     min-width: 565px;
     width: 80%;
+  }
+  .nav-links-wrapper {
+    display: block;
+		margin: 0 auto;
+		width: 60%;
+  }
+  #mobile-nav {
+    display: none;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1283,6 +1285,9 @@ p {
 
 /* ABOUT STYLES */
 /* ================================= */
+.about-img {
+  max-width: 675px;
+}
 .about-img img {
   display: block;
   width: 100%;
@@ -1325,13 +1330,18 @@ p {
 }
 @media only screen and (min-width: 1024px) {
   #about .about-img {
-    flex:30%;
+    flex:40%;
   }
   .about-text {
     margin: 30px 10% 35px;
   }
   .about-text p {
     line-height: initial;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #about .about-img {
+    flex:30%;
   }
 }
 
@@ -1412,6 +1422,9 @@ p {
   #gallery {
     padding: 35px 0;
   }
+  #gallery .ngg-gallery-thumbnail-box.ngg-4-columns {
+    width: 50%;
+  }
   .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -1425,10 +1438,17 @@ p {
   .videos-container {
     width: 90%;
   }
+  
+  
+}
+
+@media only screen and (min-width: 769px) {
+  #gallery .ngg-gallery-thumbnail-box.ngg-4-columns {
+    width: 25%;
+  }
   .video-wrapper {
     width: 45%;
   }
-  
 }
 
 /* RESUME 
@@ -1515,7 +1535,7 @@ p {
 }
 .resume-school .logo img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
 }
 .resume-school .school-info {
   text-align: center;
@@ -1528,24 +1548,14 @@ p {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 481px) {
+
+@media only screen and (min-width: 481px){
   .resume-category {
     width: 33%;
   }
-  .resume-school {
-    align-items: center;
-    flex-direction: row;
-  }
-  .resume-school .logo {
-    margin: 0 50px 0 0;
-  }
-}
-
-
-@media only screen and (min-width: 481px){
   .resume-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
@@ -1554,6 +1564,24 @@ p {
   .resume-school,
   .resume-container .contact {
     flex: 1 100%;
+  }
+  
+  
+  
+  @media only screen and (min-width: 769px) {
+    .resume-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .resume-school {
+      align-items: center;
+      flex-direction: row;
+    }
+    .resume-school .logo {
+      margin: 0 50px 0 0;
+    }
   }
 }
 /* Social Media
@@ -1660,12 +1688,24 @@ p {
 }
 @media only screen and (min-width: 481px) {
   .social-media-container {
-    flex-direction: row;
+    /* flex-direction: column; */
     justify-content: space-between;
     max-width: 1200px;
   }
   .social-twitter {
     margin-top: 0;
+  }
+  .social-wrapper {
+    margin: auto;
+    width: 85%;
+  }
+  .twitter-posts .ctf-item {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .social-media-container {
+    flex-direction: row;
   }
   .social-wrapper {
     width: 48%;
@@ -1733,6 +1773,11 @@ p {
 }
 
 @media only screen and (min-width: 481px) {
+  .contact-form-container {
+    margin: 0 10% 0 auto;
+  }
+}
+@media only screen and (min-width: 769px) {
   .contact-form-container {
     margin: 0 37% 0 auto;
   }
