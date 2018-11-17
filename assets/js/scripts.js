@@ -42,15 +42,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // Anchor Link Scrolling
     var onAnchorClick = function(event) {
-      // event.preventDefault();
       var link = this.getElementsByTagName("a");
       var linkHref= link[0].getAttribute("href");
-      console.log(linkHref);
-      // var href = link[0].data('href');
-      // console.log(href);
-      linkHref.scrollIntoView({
-        behavior: 'smooth'
-      });
+      var target = document.querySelector(linkHref)
+      target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+      })
+      history.pushState(null, null, linkHref)
+      event.preventDefault() 
+      console.log(link[0]);
       
     }
     
