@@ -52,6 +52,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
       event.preventDefault();
       
     }
+
+    var onEscapeClick = function(e) {
+      console.log(e.keyCode);
+      if(e.keyCode == 27) {
+        if (navLinks[0].classList.contains("show-menu")) {
+          navLinks[0].classList.remove("show-menu");
+        }
+      }
+    }
     
 
     // Scroll to top of Site
@@ -68,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     toTop.addEventListener("click", onToTopClick);
     for (var i = 0; i < anchors.length; i++) {
       anchors[i].addEventListener('click', onAnchorClick, false);
-  }
+    }
+    window.onkeyup(onEscapeClick);
 
 });
 

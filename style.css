@@ -972,7 +972,8 @@ object {
 /*  */
 /*  GLOBAL STYLES */
 /* ================================= */
-body {
+body,
+html {
   margin: 0;
 }
 h1,
@@ -1023,6 +1024,7 @@ p {
   position: fixed;
   padding: 15px 5%;
   top:0;
+  left: 0;
   width: 100%;
   z-index: 6;
 }
@@ -1117,12 +1119,32 @@ p {
   }
   #site-nav ul {
     display: flex;
-		justify-content: space-between;
-		margin: 25px 0;
+		
+		
 		padding: 0;
   }
   #site-nav li {
     display: inline-block;
+  }
+  
+ 
+}
+@media only screen and (min-width: 769px) {
+  #nav-links {
+    min-width: 565px;
+    width: 80%;
+  }
+  .nav-links-wrapper {
+    display: block;
+		margin: 0 auto;
+		width: 60%;
+  }
+  #mobile-nav {
+    display: none;
+  }
+  #site-nav ul {
+    justify-content: space-between;
+    margin: 25px 0;
   }
   #site-nav.sticky-nav {
     background-color: rgba(255,255,255,0.9);
@@ -1144,21 +1166,6 @@ p {
     transition: all .5s ease;
     color:#7453ee;
   }
- 
-}
-@media only screen and (min-width: 769px) {
-  #nav-links {
-    min-width: 565px;
-    width: 80%;
-  }
-  .nav-links-wrapper {
-    display: block;
-		margin: 0 auto;
-		width: 60%;
-  }
-  #mobile-nav {
-    display: none;
-  }
 }
 @media only screen and (min-width: 1024px) {
   #site-nav {
@@ -1178,7 +1185,7 @@ p {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .info {
   color: #ffffff;
@@ -1251,18 +1258,14 @@ p {
 @media only screen and (min-width: 481px) {
   #home {
     background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 100% 50%;
+    background-size: 75%;
+    background-position: 100% 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 99vh;
+    height: 90vh;
   }
-  .home-content-container {
-    width: 50%;
-    min-width: 475px;
-    margin: 25px 0;
-  }
+  
   .info h1 {
     font-size: 105px;
     line-height: 105px;
@@ -1277,9 +1280,21 @@ p {
     display: flex;
   }
 }
+
+@media only screen and (min-width: 769px) {
+  #home {
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 100% 50%;
+    height: 99vh;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .home-content-container {
-    width: 60%;
+    width: 50%;
+    min-width: 475px;
+    margin: 25px 0;
+    align-items: center;
   }
 }
 
