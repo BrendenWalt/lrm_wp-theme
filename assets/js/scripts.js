@@ -27,14 +27,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Show Mobile Menu on Hamburger Click
     var onHamburgerClick = function(event) {
       event.preventDefault();
-      console.log(links);
       links[0].classList.add("mobile-menu");
       if (navLinks[0].classList.contains("show-menu")) {
         navLinks[0].classList.remove("show-menu");
-        console.log ("Hiding Mobile menu!");
       } else {
         navLinks[0].classList.add("show-menu");
-        console.log("Showing Mobile menu");
       }
       
     }
@@ -44,11 +41,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       if (navLinks[0].classList.contains("show-menu")) {
         navLinks[0].classList.remove("show-menu");
       }
-      console.log("anchor click");
       var link = this.getElementsByTagName("a");
       var linkHref= link[0].getAttribute("href");
       var target = document.querySelector(linkHref)
-      
       target.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
