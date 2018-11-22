@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     var onEscapeClick = function(e) {
-      console.log(e.keyCode);
-      if(e.keyCode == 27) {
+      console.log(e.key);
+      if(e.key === "Escape") {
         if (navLinks[0].classList.contains("show-menu")) {
           navLinks[0].classList.remove("show-menu");
         }
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     for (var i = 0; i < anchors.length; i++) {
       anchors[i].addEventListener('click', onAnchorClick, false);
     }
-    window.onkeyup(onEscapeClick);
+    document.addEventListener("keyup", onEscapeClick);
 
 });
 
