@@ -1142,6 +1142,11 @@ p {
   #mobile-nav {
     display: none;
   }
+  #site-nav {
+    width: 100%;
+    left:0;
+    margin-bottom: 20px;
+  }
   #site-nav ul {
     justify-content: space-between;
     margin: 25px 0;
@@ -1169,8 +1174,13 @@ p {
 }
 @media only screen and (min-width: 1024px) {
   #site-nav {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #site-nav {
     width: 60%;
-    left: 0;
+   
   }
 }
 
@@ -1214,7 +1224,8 @@ p {
 }
 .site-info-container{
   text-align: center;
-  margin: 35px 5% 5px;
+  padding: 0 5%;
+  margin: 35px auto 5px;
   width: 100%;
 }
 .social-container {
@@ -1286,13 +1297,17 @@ p {
     background-size: 50%;
     height: 99vh;
   }
+  .site-info-container {
+    margin-top: 55px;
+  }
   .social-container {
     display: flex;
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
     width: 60%;
   }
   .social-icon { 
     border-width: 3px;
+    margin: 0 25px;
    }
   .social-icon i {
     font-size: 26px;
@@ -1750,7 +1765,7 @@ p {
 #contact {
   background-color: #9480db;
   background-position: 50% 100%;
-  background-size: cover;
+  
   background-repeat: no-repeat;
   background-image: linear-gradient(to bottom, #9480db 0%,#ffffff 100%);
   padding: 20px 0;

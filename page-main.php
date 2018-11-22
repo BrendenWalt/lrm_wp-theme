@@ -328,7 +328,7 @@ get_header();
 
     <!-- Contact Form -->
     <?php if ( !empty($contact_bg_image)) { ?>
-      <section id="contact" style="background-image: url('<?php echo $contact_bg_image['url']; ?>')" >
+      <section id="contact" style="background-image: url('<?php echo $contact_bg_image['url']; ?>'); background-size: cover;" >
     <?php } else { ?>
       <section id="contact">
     <?php } ?>
