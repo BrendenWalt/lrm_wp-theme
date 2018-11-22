@@ -27,6 +27,7 @@ $resume_file              = get_field('resume_file');
 
 $contact_form_title       = get_field('contact_form_title');
 $contact_form_shortcode   = get_field('contact_form_shortcode');
+$contact_bg_image         = get_field('contact_background_image');
 
 
 $social_media_accounts     = get_field('social_media_account_selector');
@@ -56,19 +57,6 @@ get_header();
             <h2><?php bloginfo('description'); ?></h2>
           </div>
         </div>
-      </div>
-
-      <?php if ( !empty($homepage_bg_image)) { ?>
-
-        <div class="mobile-home-img">
-          <img src="<?php echo $homepage_bg_image['url']; ?>" alt="<?php echo $homepage_bg_image['alt']; ?>">
-        </div>
-        
-      <?php } ?>
-        
-
-      <div class="mobile-home-img">
-
       </div>
 
       <div class="social-container">
@@ -103,6 +91,16 @@ get_header();
           
         
       </div>
+
+      <?php if ( !empty($homepage_bg_image)) { ?>
+
+        <div class="mobile-home-img">
+          <img src="<?php echo $homepage_bg_image['url']; ?>" alt="<?php echo $homepage_bg_image['alt']; ?>">
+        </div>
+        
+      <?php } ?>
+
+      
       
       
     </section>
@@ -329,7 +327,11 @@ get_header();
     
 
     <!-- Contact Form -->
-    <section id="contact">
+    <?php if ( !empty($contact_bg_image)) { ?>
+      <section id="contact" style="background-image: url('<?php echo $contact_bg_image['url']; ?>')" >
+    <?php } else { ?>
+      <section id="contact">
+    <?php } ?>
       <a name="contact"></a>
       <div class="contact-form-container">
         <div class="title">

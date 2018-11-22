@@ -41,13 +41,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // Anchor Link Scrolling
     var onAnchorClick = function(event) {
+      if (navLinks[0].classList.contains("show-menu")) {
+        navLinks[0].classList.remove("show-menu");
+      }
+      console.log("anchor click");
       var link = this.getElementsByTagName("a");
       var linkHref= link[0].getAttribute("href");
       var target = document.querySelector(linkHref)
+      
       target.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
-      })
+      });
       history.pushState(null, null, linkHref)
       event.preventDefault();
       

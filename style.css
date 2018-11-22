@@ -1170,6 +1170,7 @@ p {
 @media only screen and (min-width: 1024px) {
   #site-nav {
     width: 60%;
+    left: 0;
   }
 }
 
@@ -1218,18 +1219,18 @@ p {
 }
 .social-container {
   align-self: flex-start;
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 50px;
-  min-width: 375px;
-  width: 60%;
+  margin: 20px auto 5px;
+  width: 80%;
+  
 }
 .social-icon {
-  border: 3px solid rgba(255,255,255,0.75);
+  border: 2px solid rgba(255,255,255,0.75);
   background-color: rgba(255,255,255,0.3);
   border-radius: 35px;
-  margin: 0 25px;
+  margin: 0 10px;
   transition: all .2s ease;
 }
 .social-icon:hover {
@@ -1241,12 +1242,12 @@ p {
   text-decoration: none;
 }
 .social-icon i {
-  font-size: 26px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   color: rgba(255,255,255,0.75);
   transition: all .2s ease;
 }
@@ -1276,25 +1277,41 @@ p {
   .mobile-home-img {
     display: none;
   }
-  .social-container {
-    display: flex;
-  }
+ 
 }
 
 @media only screen and (min-width: 769px) {
   #home {
     background-repeat: no-repeat;
     background-size: 50%;
-    background-position: 100% 50%;
     height: 99vh;
+  }
+  .social-container {
+    display: flex;
+    margin-bottom: 50px;
+    width: 60%;
+  }
+  .social-icon { 
+    border-width: 3px;
+   }
+  .social-icon i {
+    font-size: 26px;
+    width: 55px;
+    height: 55px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .home-content-container {
-    width: 50%;
+    width: 60%;
     min-width: 475px;
     margin: 25px 0;
     align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #home {
+    background-size: contain !important;
   }
 }
 
@@ -1420,7 +1437,7 @@ p {
 }
 .video-wrapper {
   width: 100%;
-  margin: 0 10px;
+  margin: 10px;
 }
 
 
@@ -1474,7 +1491,7 @@ p {
 }
 #resume .logo img {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
 }
 
 #resume .title-container {
@@ -1732,7 +1749,10 @@ p {
 ================================ */
 #contact {
   background-color: #9480db;
-  background: linear-gradient(to bottom, #9480db 0%,#ffffff 100%);
+  background-position: 50% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, #9480db 0%,#ffffff 100%);
   padding: 20px 0;
 }
 .contact-form-container {
@@ -1782,6 +1802,7 @@ p {
   padding: 12px 45px;
   text-decoration: none;
   transition: background 0.5s ease;
+  width: 95%;
 }
 .contact-form-wrap input[type="submit"]:hover {
   background-color: #62d8ca;
@@ -1795,6 +1816,9 @@ p {
 @media only screen and (min-width: 769px) {
   .contact-form-container {
     margin: 0 37% 0 auto;
+  }
+  .contact-form-wrap input[type="submit"] {
+    width: auto;
   }
 }
 
