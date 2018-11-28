@@ -54,11 +54,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     var onEscapeClick = function(e) {
-      console.log(e.key);
-      if(e.key === "Escape") {
+      console.log(links);
+      var key = e.key || e.keyCode;
+      if(key === "Escape") {
         if (navLinks[0].classList.contains("show-menu")) {
           navLinks[0].classList.remove("show-menu");
         }
+      }
+    }
+
+    var onMobileMenuClick = function(e) {
+      e.preventDefault();
+      console.log("in mobile hide function");
+      if (navLinks[0].classList.contains("show-menu")) {
+        navLinks[0].classList.remove("show-menu");
       }
     }
     
@@ -79,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       anchors[i].addEventListener('click', onAnchorClick, false);
     }
     document.addEventListener("keyup", onEscapeClick);
+    links[0].addEventListener('click', onMobileMenuClick);
 
 });
 

@@ -1020,13 +1020,14 @@ p {
 
 
 #mobile-nav {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.2);
   position: fixed;
   padding: 15px 5%;
   top:0;
   left: 0;
   width: 100%;
   z-index: 6;
+  transition: background-color .1s ease;
 }
 #mobile-nav div {
   width: 30px;
@@ -1044,11 +1045,17 @@ p {
 .menu-item a:hover {
   color: #7453ee;
 }
+.nav-links {
+  transition: background-color 0.3s ease;
+}
 .nav-links-wrapper {
   display: none;
 }
 .nav-links-wrapper.show-menu {
   display:block;
+}
+.nav-links-wrapper.show-menu + #mobile-nav {
+  background-color: rgba(0,0,0,0);
 }
 .mobile-menu .nav-links-wrapper {
   display: block;
@@ -1078,7 +1085,7 @@ p {
 
 @media only screen and (max-width: 768px) {
   .nav-links.mobile-menu {
-    background-color: rgba(116, 83, 238, 0.9);
+    background-color: rgba(116, 83, 238, 0.95);
     display: flex;
     position: fixed;
     width: 100%;
@@ -1090,6 +1097,7 @@ p {
     flex-direction: column;
     justify-content: center;
     transition: all 0.5s ease;
+    z-index: 5;
   }
   #nav-links.mobile-menu li{
     margin: 35px auto;
@@ -1208,6 +1216,7 @@ p {
   font-size: 59px;
   font-weight: 700;
   font-family: 'Tangerine','Arapey', 'Times New Roman', Times, serif;
+  line-height: 1em;
 }
 .info h2 {
   font-size: 23px;
@@ -1333,7 +1342,7 @@ p {
 /* ABOUT STYLES */
 /* ================================= */
 .about-img {
-  max-width: 675px;
+  max-width: 769px;
 }
 .about-img img {
   display: block;
@@ -1350,6 +1359,20 @@ p {
 }
 
 @media only screen and (min-width: 481px) {
+  
+  
+  .about-text-container {
+    display: flex;
+    align-items: center;
+  }
+  .about-text {
+    padding: 30px 5% 35px;;
+  }
+  .about-text p {
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 769px) {
   #about {
     display: flex;
     flex-direction: row-reverse;
@@ -1363,16 +1386,6 @@ p {
     object-fit: cover;
     width: 100%;
     height: 100%;
-  }
-  .about-text-container {
-    display: flex;
-    align-items: center;
-  }
-  .about-text {
-    padding: 30px 5% 35px;;
-  }
-  .about-text p {
-    line-height: 1.5em;
   }
 }
 @media only screen and (min-width: 1024px) {
