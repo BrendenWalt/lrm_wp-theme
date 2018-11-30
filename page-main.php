@@ -299,7 +299,13 @@ get_header();
       <a name="social"></a>
     <!-- Diagonal Border -->
       <div class="diagonal-border">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px"
+    viewBox="0 0 1920 258" style="enable-background:new 0 0 1920 258;" xml:space="preserve">
         
+        <g>
+          <polygon class="st0" points="0,240 1920,0 0,0 	"/>
+        </g>
+        </svg>
       </div>
       <div class="title">
         <h2>Follow Laura on Social Media</h2>
