@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     var onEscapeClick = function(e) {
-      console.log(links);
       var key = e.key || e.keyCode;
       if(key === "Escape") {
         if (navLinks[0].classList.contains("show-menu")) {
@@ -65,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var onMobileMenuClick = function(e) {
       e.preventDefault();
-      console.log("in mobile hide function");
       if (navLinks[0].classList.contains("show-menu")) {
         navLinks[0].classList.remove("show-menu");
       }
