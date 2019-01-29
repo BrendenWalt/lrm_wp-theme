@@ -1725,6 +1725,9 @@ p {
   color: #ffffff;
   text-decoration: none;
 }
+.social-ig .sbi_bio {
+  color: #ffffff; 
+}
 .social-info {
   margin: 0 auto 25px;
   text-align: center;
@@ -1802,7 +1805,8 @@ p {
     flex-direction: row;
   }
   .social-wrapper {
-    width: 48%;
+    width: 100%;
+    max-width: 1000px;
   }
 }
 
@@ -1970,4 +1974,36 @@ footer {
   font-size: 16px;
   width: 35px;
   height: 35px;
+}
+
+
+
+/* Standalone Page Styles */
+.standalone header #site-nav {
+  display: none;
+}
+.standalone section.header {
+  background-color: #9480db;
+  padding: 25px;
+}
+.standalone .info {
+  display: block;
+}
+.standalone .info h1 a{
+  font-family: 'Tangerine','Arapey', 'Times New Roman', Times, serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+.standalone .info h1 a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.standalone .info h2 a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.standalone .page-content {
+  margin:0 auto;
+  padding: 25px;
+  max-width: 1200px;
 }

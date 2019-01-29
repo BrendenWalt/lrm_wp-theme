@@ -36,6 +36,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'laura-renee-mehl' ); ?></a>
 
 	<header>
+		<?php if (is_page_template('page-main.php')) { ?>
+
 		<div id="site-nav" class="navigation-wrapper top-nav">
 			
 			<?php 
@@ -53,6 +55,7 @@
 			</div>
 			
 		</div>
+		<?php	} ?>
 	</header>
 
 

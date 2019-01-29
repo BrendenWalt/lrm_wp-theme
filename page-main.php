@@ -318,14 +318,7 @@ get_header();
             <?php echo do_shortcode($instagram_feed); ?>
           </div>
         </div>
-        <div class="social-twitter social-wrapper">
-          <div class="social-info">
-            
-          </div>
-          <div class="twitter-posts">
-            <?php echo do_shortcode($twitter_feed); ?>
-          </div>
-        </div>
+        
       </div>
     </section>
 
