@@ -125,7 +125,6 @@ get_header();
         </div>
 
       <?php endif; ?>
-
       
     </section>
 
@@ -174,7 +173,7 @@ get_header();
                 'terms' => 'left'
             )),
             'orderby' => 'post_id', 
-            'order' => 'ASC' ) );
+            'order' => 'DESC' ) );
             while( $loop->have_posts() ) : $loop->the_post();
             echo $the_post_name
           ?>
@@ -210,7 +209,7 @@ get_header();
                 'terms' => 'middle'
             )),
             'orderby' => 'post_id', 
-            'order' => 'ASC' ) );
+            'order' => 'DESC' ) );
             while( $loop->have_posts() ) : $loop->the_post();
             echo $the_post_name
           ?>
@@ -247,7 +246,7 @@ get_header();
                 'terms' => 'right'
             )),
             'orderby' => 'post_id', 
-            'order' => 'ASC' ) );
+            'order' => 'DESC' ) );
             while( $loop->have_posts() ) : $loop->the_post();
             echo $the_post_name
           ?>
