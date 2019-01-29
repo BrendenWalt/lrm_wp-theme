@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-
+    
     // Query Selectors
     var anchors = document.getElementsByClassName('menu-item')
     var hamburger = document.getElementById("mobile-nav");
@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var pageBody = document.getElementsByTagName("body");
     var navBar = document.getElementById("site-nav");
     var navLinks = document.getElementsByClassName("nav-links-wrapper");
+    var footerYear = document.getElementById("year");
+
+    // Add current year to footer
+    footerYear.innerHTML = new Date().getFullYear();
     // Sticky Nav on Scroll
 
     function stickyNav() {

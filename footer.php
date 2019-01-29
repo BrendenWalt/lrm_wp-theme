@@ -65,7 +65,7 @@ $youtube_username          = get_field('youtube_account',26);
 
 
         <div class="copyright">
-          &copy; <span id="year"></span><?php bloginfo('name'); ?> All rights reserved.
+          &copy;<span id="year"></span> <?php bloginfo('name'); ?> All rights reserved.
         </div>
       </div>
 
