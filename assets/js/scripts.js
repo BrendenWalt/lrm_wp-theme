@@ -25,8 +25,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     }
 
-    window.addEventListener("scroll", stickyNav);
-
+    if (pageBody[0].classList.contains("page-template-page-main")) {
+      window.addEventListener("scroll", stickyNav);
+    }
+    
     // Click Handlers
     // Show Mobile Menu on Hamburger Click
     var onHamburgerClick = function(event) {

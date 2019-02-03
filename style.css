@@ -1984,10 +1984,14 @@ footer {
 }
 .standalone section.header {
   background-color: #9480db;
-  padding: 25px;
+  padding: 20px 0 15px;
 }
 .standalone .info {
   display: block;
+}
+.standalone .info h1 {
+  font-size: 65px;
+  line-height: 1em;
 }
 .standalone .info h1 a{
   font-family: 'Tangerine','Arapey', 'Times New Roman', Times, serif;
@@ -1998,12 +2002,15 @@ footer {
   text-decoration: none;
   color: #ffffff;
 }
+.standalone .info h2 {
+  font-size: 19px;
+}
 .standalone .info h2 a{
   color: #ffffff;
   text-decoration: none;
 }
 .standalone .page-content {
-  margin:0 auto;
-  padding: 25px;
-  max-width: 1200px;
+  margin:1.5em auto;
+  /* padding: 25px;
+  max-width: 1200px; */
 }
