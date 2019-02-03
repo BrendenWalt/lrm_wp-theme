@@ -1979,6 +1979,7 @@ footer {
 
 
 /* Standalone Page Styles */
+
 .standalone header #site-nav {
   display: none;
 }
@@ -1990,7 +1991,7 @@ footer {
   display: block;
 }
 .standalone .info h1 {
-  font-size: 65px;
+  font-size: 12vw;
   line-height: 1em;
 }
 .standalone .info h1 a{
@@ -2003,7 +2004,7 @@ footer {
   color: #ffffff;
 }
 .standalone .info h2 {
-  font-size: 19px;
+  font-size: 14px;
 }
 .standalone .info h2 a{
   color: #ffffff;
@@ -2011,6 +2012,13 @@ footer {
 }
 .standalone .page-content {
   margin:1.5em auto;
-  /* padding: 25px;
-  max-width: 1200px; */
+}
+@media only screen and (min-width: 481px) {
+  .standalone .info h1 {
+    font-size: 65px;
+    line-height: 1em;
+  }
+  .standalone .info h2 {
+    font-size: 19px;
+  }
 }
