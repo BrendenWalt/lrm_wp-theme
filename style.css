@@ -1213,7 +1213,7 @@ p {
 }
 .info h1 {
   text-align: center;
-  font-size: 51px;
+  font-size: 14vw;
   font-weight: 700;
   font-family: 'Tangerine','Arapey', 'Times New Roman', Times, serif;
   line-height: 1em;
@@ -1761,6 +1761,9 @@ p {
   flex: 1;
   width: 100%;
 }
+.social-wrapper {
+  padding: 0 2%;
+}
 .twitter-posts #ctf .ctf-header {
   display: flex;
   justify-content: center;
@@ -1790,6 +1793,7 @@ p {
     margin-top: 0;
   }
   .social-wrapper {
+    padding: 0;
     margin: auto;
     width: 85%;
   }
@@ -1824,7 +1828,7 @@ p {
 .contact-form-container {
   margin: 0 auto;
   max-width: 875px;
-  padding: 25px 45px 10px;
+  padding: 25px 5% 10px;
 }
 .contact-form-container p {
   margin: 5px 0 7px;
@@ -1851,7 +1855,7 @@ p {
   color: #404040;
   padding: 5px 12px;
   transition: background .2s ease;
-  width: 95%;
+  width:100%;
 }
 .contact-form-wrap input:focus,
 .contact-form-wrap textarea:focus {
@@ -1878,6 +1882,13 @@ p {
 @media only screen and (min-width: 481px) {
   .contact-form-container {
     margin: 0 10% 0 auto;
+    padding: 25px 45px 10px;
+  }
+  .contact-form-wrap input[type="text"],
+  .contact-form-wrap input[type="email"],
+  .contact-form-wrap input[type="tel"],
+  .contact-form-wrap textarea {
+    width: 95%;
   }
 }
 @media only screen and (min-width: 769px) {
